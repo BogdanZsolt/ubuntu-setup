@@ -6,6 +6,10 @@ sudo add-apt-repository "deb http://archive.canonical.com/ubuntu cosmic partner"
 # update software list & upgrade 
 sudo apt update && sudo apt upgrade -y
 sudo apt install software-properties-common apt-transport-https wget
+# download lists
+wget https://github.com/BogdanZsolt/ubuntu-setup/blob/master/ubuntu.packages
+wget https://github.com/BogdanZsolt/ubuntu-setup/blob/master/ubuntu.removes
+wget https://github.com/BogdanZsolt/ubuntu-setup/blob/master/gnome-shell-list.html
 # add chrome repo
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
@@ -24,6 +28,8 @@ wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add
 sudo apt-add-repository "deb https://download.sublimetext.com/ apt/stable/"
 # setup Yaru theme repo
 sudo add-apt-repository ppa:communitheme/ppa
+# setup krita repo
+sudo add-apt-repository ppa:kritalime/ppa
 # update repo list
 sudo apt update
 #--------------------------------------------------
@@ -34,6 +40,10 @@ sudo snap install slack --classic
 sudo snap install gitkraken
 sudo snap install mailspring
 sudo snap install caprine
+sudo snap install gravit-designer
+# install ocenaudio
+wget http://www.ocenaudio.com/downloads/index.php/ocenaudio_debian64.deb -P ~/Downloads
+sudo apt install -y ~/Downloads/ocenaudio_debian64.deb
 # Remove Amazon Launcher
 sudo apt -y purge ubuntu-web-launchers 
 # Improve Ubuntu Battery 
