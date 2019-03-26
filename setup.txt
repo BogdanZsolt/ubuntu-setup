@@ -1,0 +1,14 @@
+
+gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
+install dconf-editor and gnome-tweak-tool. 'sudo apt install dconf-editor gnome-tweak-tool'
+run 'dconf-editor' navigate '/org/gnome/mutter/' and on 'center-new-windows'
+
+nano ~/.bashrc
+Install 'neofetch'. 'sudo apt install neofetch'. 
+Insert new line the end of file 'neofetch'. save 'ctrl+s' close file 'ctrl+x'.
+Config 'neofetch'. 'nano ~/.config/neofetch/config.conf'.
+setup terminal color 'Edit > Preferences' initial terminal size:150x50 colors > Built-in schemes: grey on black
+
+
+  
+ 

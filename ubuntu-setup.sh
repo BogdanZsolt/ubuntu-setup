@@ -21,11 +21,11 @@ sudo add-apt-repository ppa:linrunner/tlp
 # sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
 # echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
 # setup vscode repo
-# wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
-# sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
 # setup sublime repo
-# wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
-# sudo apt-add-repository "deb https://download.sublimetext.com/ apt/stable/"
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+sudo apt-add-repository "deb https://download.sublimetext.com/ apt/stable/"
 # setup Yaru theme repo
 sudo add-apt-repository ppa:communitheme/ppa
 # update repo list
@@ -34,15 +34,15 @@ sudo apt update
 #install software
 sudo apt -y install $(cat ubuntu.packages)
 #SNAP install
-sudo snap install slack --classic
-sudo snap install gitkraken
-sudo snap install mailspring
-sudo snap install caprine
-sudo snap install gravit-designer
-sudo snap install krita
-sudo snap install spotify
-sudo snap install vscode --classic
-sudo snap install sublime-text --classic
+# sudo snap install slack --classic
+# sudo snap install gitkraken
+# sudo snap install mailspring
+# sudo snap install caprine
+# sudo snap install gravit-designer
+# sudo snap install krita
+# sudo snap install spotify
+# sudo snap install vscode --classic
+# sudo snap install sublime-text --classic
 
 # install ocenaudio
 wget http://www.ocenaudio.com/downloads/index.php/ocenaudio_debian64.deb -P ~/Downloads
